@@ -18,7 +18,7 @@
 
 	<script>
 		function selectImg() {
-			window.webkit.messageHandlers.selectImg.postMessage('');
+			window.webkit.messageHandlers.selectImg.postMessage({});
 		}
 		function showImg(arg){
 			document.getElementById('androidToJs').src = arg;
