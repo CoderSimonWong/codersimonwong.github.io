@@ -19,7 +19,7 @@
 	<script>
 		function selectImg() {
 			window.webkit.messageHandlers.selectImage.postMessage({
-				'requestURL':'https://property.yzwxhd.com/lar/wykhz/club/upload-fp-pic',
+				'requestURL':'https://property.yzwxhd.com/lar/wzhb/club/upload-fp',
 				'parameters':{
 					'parameter0':'parameter0',
 					'parameter1':'parameter1'
@@ -30,16 +30,16 @@
 				'cropImageScale':'16:9'
 			});
 		}
-		function selectImageResult(arg) {
-   			// document.getElementById('androidToJs').src = arg;
-   			// alert(arg);
-   			// var androidToJs = document.getElementById('androidToJs');
-   			// androidToJs.innerText = '辣鸡iOS';
+		function selectImageResult(returnValue) {
+   			document.getElementById('androidToJs').src = arg;
+   			alert(arg);
+   			var androidToJs = document.getElementById('androidToJs');
+   			androidToJs.innerText = '辣鸡iOS';
 
-   			// setTimeout(function(){
-    		// 	var androidToJs = document.getElementById('androidToJs');
-    		// 	androidToJs.innerText = arg;
-   			// },5000)
+   			setTimeout(function(){
+    			var androidToJs = document.getElementById('androidToJs');
+    			androidToJs.innerText = returnValue;
+   			},5000)
   		}
 	</script>
 </body></html>
