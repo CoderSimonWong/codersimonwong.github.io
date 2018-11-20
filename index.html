@@ -13,7 +13,7 @@
 <body>
 	<button id="ss" type="button" onclick="selectImg()">点击选择图片并且上传</button>
 	<br>
-	<div id="androidToJs" width="200px">
+	<div id="androidToJs" width="200px"></div>
 	<p id="test"></p>
 
 	<script>
@@ -31,8 +31,15 @@
 			});
 		}
 		function selectImageResult(arg){
-			document.getElementById('androidToJs').src = arg;
-			alert(arg);
-		}
+   			// document.getElementById('androidToJs').src = arg;
+   			// alert(arg);
+   			var androidToJs = document.getElementById('androidToJs');
+   			androidToJs.innerText = '辣鸡iOS';
+
+   			setTimeout(function(){
+    			var androidToJs = document.getElementById('androidToJs');
+    			androidToJs.innerText = arg;
+   			},5000)
+  		}
 	</script>
 </body></html>
