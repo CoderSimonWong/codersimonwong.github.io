@@ -13,7 +13,7 @@
 <body>
 	<button id="ss" type="button" onclick="selectImg()">点击选择图片并且上传</button>
 	<br>
-	<img id="androidToJs" width="200px">
+	<div id="androidToJs" width="200px">
 	<p id="test"></p>
 
 	<script>
@@ -30,7 +30,7 @@
 				'cropImageScale':'16:9'
 			});
 		}
-		function showImg(arg){
+		function selectImageResult(arg){
 			document.getElementById('androidToJs').src = arg;
 			alert(arg);
 		}
