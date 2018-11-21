@@ -12,6 +12,7 @@
 <script charset="utf-8" src="chrome-extension://jgphnjokjhjlcnnajmfjlacjnjkhleah/js/btype.js"></script><div id="BIJIA_HAS_BUILT"></div></head>
 <body>
 	<button id="ss" type="button" onclick="selectImg()">点击选择图片并且上传</button>
+	<button id="ss" type="button" onclick="nativeShare()">分享</button>
 	<br>
 	<div id="androidToJs" width="200px"></div>
 	<p id="test"></p>
@@ -31,13 +32,14 @@
 			});
 		}
 		function selectImageResult(returnValue) {
-   			var androidToJs = document.getElementById('androidToJs');
-   			androidToJs.innerText = '辣鸡iOS';
-
-   			setTimeout(function(){
-    			var androidToJs = document.getElementById('androidToJs');
-    			androidToJs.innerText = returnValue;
-   			},5000)
+    		var androidToJs = document.getElementById('androidToJs');
+    		androidToJs.innerText = returnValue;
+  		}
+  		function nativeShare() {
+  			window.webkit.messageHandlers.nativeShare.postMessage({
+  				'isNeedSharePoster':'1',
+  				'posterURL':'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1542793712739&di=c7f8d237bbf7cd87d8f8112939135e66&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D3935989350%2C2670705605%26fm%3D214%26gp%3D0.jpg'
+  			})
   		}
 	</script>
 </body></html>
