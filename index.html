@@ -12,12 +12,17 @@
 <script charset="utf-8" src="chrome-extension://jgphnjokjhjlcnnajmfjlacjnjkhleah/js/btype.js"></script><div id="BIJIA_HAS_BUILT"></div></head>
 <body>
 	<button id="ss" type="button" onclick="selectImg()">点击选择图片并且上传</button>
-	<button id="ss" type="button" onclick="nativeShare()">分享</button>
+	<button id="sss" type="button" onclick="getToken()">Token</button>
 	<br>
 	<div id="androidToJs" width="200px"></div>
 	<p id="test"></p>
 
 	<script>
+		function getToken() {
+			window.webkit.messageHandlers.getToken.postMessage({
+				
+			});
+		}
 		function selectImg() {
 			window.webkit.messageHandlers.selectImage.postMessage({
 				'requestURL':'https://property.yzwxhd.com/lar/wykhz/club/upload-fp-pic',
