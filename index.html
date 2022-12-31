@@ -1,309 +1,322 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "htt`://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>企业文化伴你行~</title>
-        <link type="text/css" rel="stylesheet" href="./css/default.css">
-            <script type="text/javascript" src="./css/jquery.min.js"></script>
-            <script type="text/javascript" src="./css/jscex.min.js"></script>
-            <script type="text/javascript" src="./css/jscex-parser.js"></script>
-            <script type="text/javascript" src="./css/jscex-jit.js"></script>
-            <script type="text/javascript" src="./css/jscex-builderbase.min.js"></script>
-            <script type="text/javascript" src="./css/jscex-async.min.js"></script>
-            <script type="text/javascript" src="./css/jscex-async-powerpack.min.js"></script>
-            <script type="text/javascript" src="./css/functions.js" charset="utf-8"></script>
-            <script type="text/javascript" src="./css/love.js" charset="utf-8"></script>
-            <style type="text/css">
-                #code{
-                    max-height: 60vh;
-                    overflow: scroll;
-                }
-                </style>
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5+Canvas漂亮的3D烟花动画生日特效</title>
+
+<style>
+html,body{
+	margin:0px;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	background:#000;
+}
+</style>
+
 </head>
 <body>
-    <div id="main">
-        <div id="wrap">
-            <div id="text">
-                <div id="code">
-                    <font color="#201D1D">
-                        <span class="say">必背👇</span><br>
-                        <span class="say"></span><br>
-                        <span class="say">企业文化经书</span><br>
-                        <span class="say">一· 使命: 让学习更轻松，让高分更简单</span><br>
-                        <span class="say">二· 愿景: 成为享誉全球的网络学习平台和在线教育品牌</span><br>
-                        <span class="say">三· 价值观: 专心专注专业做专家，利国利民利他再利己</span><br>
-                        <span class="say"></span><br>
-                        <span class="say">公司底线</span><br>
-                        <span class="say">1. 不孝顺父母。</span><br>
-                        <span class="say">2. 泄露公司机密。</span><br>
-                        <span class="say">3. 弄虚作假，欺上瞒下。</span><br>
-                        <span class="say">4. 贪污受贿，中饱私囊。</span><br>
-                        <span class="say">5. 损害公司利益。</span><br>
-                        <span class="say">6. 制造或传播负面信息。</span><br>
-                        <span class="say">7. 煽动怠工或罢工。</span><br>
-                        <span class="say">8. 不正当恋爱关系。</span><br>
-                        <span class="say">9. 辱骂同事，打架斗殴。</span><br>
-                        <span class="say"></span><br>
-                        <span class="say">抽5条👇</span><br>
-                        <span class="say"></span><br>
-                        <span class="say">企业文化经书</span><br>
-                        <span class="say">四· 经营理念: 诚为本，和则兴; 技至精，业竞成</span><br>
-                        <span class="say">五· 人才理念: 孝为先，德为重，讷于言，敏于行，敢承诺，能担当</span><br>
-                        <span class="say">六· 管理理念: 以结果为导向，用数据说话</span><br>
-                        <span class="say">七· 服务理念: 以客户需求为中心，不断超出客户期望</span><br>
-                        <span class="say">八· 品质理念: 坚持原创，质造精典</span><br>
-                        <span class="say">九· 教育理念: 教为辅，育为主，教方法，效为先，树品格，育德行</span><br>
-                        <span class="say">十· 公司文化: 思想统一，目标统一，行动统一</span><br>
-                        <span class="say">十一· 军队文化: 服从指挥，严守纪律，完成任务，不找借口</span><br>
-                        <span class="say">十二· 家庭文化: 亲力亲为为亲人，好人好事好氛围，爱人爱己爱大家</span><br>
-                        <span class="say">十三· 学校文化: 勤奋好学，学以致用，用到极致</span><br>
-                        <span class="say"></span><br>
-                        <span class="say">管理金句22句</span><br>
-                        <span class="say">1. 严是爱，松是害，不管不问要变坏。</span><br>
-                        <span class="say">2. 敢说真话，需要魄力; 敢听真话，需要勇气。</span><br>
-                        <span class="say">3. 管理是一种铁腕柔情、恩威并重、张弛有度的艺术。</span><br>
-                        <span class="say">4. 命运取决于你的决定。</span><br>
-                        <span class="say">5. 打造团队从敬畏制度开始，对违规者的宽恕就是对遵守者的最大不公平。</span><br>
-                        <span class="say">6. 领导只有对自己狠，才能引发一群对自己狠的人。</span><br>
-                        <span class="say">7. 一群人影响一群人，一群人驱动一群人。</span><br>
-                        <span class="say">8. 不要让非专业的人干专业的事。</span><br>
-                        <span class="say">9. 要让下属高效，自己不能低效。</span><br>
-                        <span class="say">10. 工作上的严格要求，底线上的坚决捍卫，生活上的倍加关心，能力上的持续提升!</span><br>
-                        <span class="say">11. 统一思想是避免执行障碍最重要的关键，形成承诺是杜绝借口最重要的武器。</span><br>
-                        <span class="say">12. 尊重英雄，才能引发更多的英雄。</span><br>
-                        <span class="say">13. 管理的终极目标就是不管理，将问题扼杀在摇篮里!</span><br>
-                        <span class="say">14. 光讲物质，不讲精神，会让员工唯利是图; 光讲精神，不讲物质，会让员工缺乏狼性。</span><br>
-                        <span class="say">15. 有功自下往上开始奖励，有过自上往下开始惩罚。</span><br>
-                        <span class="say">16. 文化是企业的灵魂，是企业基业长青的保障，在被管理中感悟管理，在团队建设中领悟团队。</span><br>
-                        <span class="say">17. 没有强大的团队，再伟大的梦想都是恶梦一场!</span><br>
-                        <span class="say">18. 能用众力，则无敌于天下; 能用众智，则无畏于圣人!</span><br>
-                        <span class="say">19. 管理不是看你能管多少人，而是看你能成就多少人。</span><br>
-                        <span class="say">20. 培养一群善于解决问题的人，而不是自己去解决所有问题。</span><br>
-                        <span class="say">21. 不要给搜寻者钥匙，而是告诉他们怎么找到钥匙。</span><br>
-                        <span class="say">22. 员工看你怎么做，而不是听你怎么说。</span><br>
-                        <span class="say"></span><br>
-                        <span class="say">全员金句30句</span><br>
-                        <span class="say">1. 知道1%+做到99%+相信100%=得到200%</span><br>
-                        <span class="say">2. 做人开怀大度，无愧于心; 做事斤斤计较，无愧于薪。</span><br>
-                        <span class="say">3. 不怕千招会，就怕一招绝。</span><br>
-                        <span class="say">4. 没有建议的意见就是发牢骚。</span><br>
-                        <span class="say">5. 当你问我该怎么办的时候，请至少带两种解决方案来汇报工作!</span><br>
-                        <span class="say">6. 业精于勤而荒于嬉，行成于思而毁于随。</span><br>
-                        <span class="say">7. 用一辈子的时间，做两辈子的事，活三辈子的精彩。</span><br>
-                        <span class="say">8. 承诺不重要，重要的是守承诺。</span><br>
-                        <span class="say">9. 自由是建立在规则和秩序之上，否则叫散漫。</span><br>
-                        <span class="say">10. 经常出现，时常表现，做出贡献，终被发现。</span><br>
-                        <span class="say">11. 做人做到人人离不开，做事做到人人忘不了。</span><br>
-                        <span class="say">12. 这个世界没有应该和理所当然，只有感恩和行动。</span><br>
-                        <span class="say">13. 要想结果变好，首先自己变好!</span><br>
-                        <span class="say">14. 成长就会出丑，出丑才会成长。</span><br>
-                        <span class="say">15. 没有计划不上班，没有总结不下班!</span><br>
-                        <span class="say">16. 敬业大于专业，专业前提敬业!</span><br>
-                        <span class="say">17. 一丝之差，优劣分家!</span><br>
-                        <span class="say">18. 时时寻求效率进步，事事讲究方法技术。</span><br>
-                        <span class="say">19. 宁可事前检查，不可事后返工。</span><br>
-                        <span class="say">20. 每天进一步，踏上成功路。</span><br>
-                        <span class="say">21. 成功者找方法，失败者找借口。</span><br>
-                        <span class="say">22. 行动是成功的开始，等待是失败的源头。</span><br>
-                        <span class="say">23. 做好了，才算做了。</span><br>
-                        <span class="say">24. 你恐惧的只是恐惧本身，而真正恐惧的事情，却永远不会到来。</span><br>
-                        <span class="say">25. 不要把战友变成敌人。</span><br>
-                        <span class="say">26. 优秀不是行为，而是应该成为习惯和素养，如是，成功才能复制。</span><br>
-                        <span class="say">27. 因势而变，顺势而为，乘势而上。</span><br>
-                        <span class="say">28. 一个人真正伟大之处就是认识到自己的渺小。</span><br>
-                        <span class="say">29. 一个人的价值，应当看他贡献什么，而不应当看他取得什么。</span><br>
-                        <span class="say">30. 人只要有信念，什么艰苦都能忍受，什么环境都能适应!</span><br>
-                        <span class="say"></span><br>
-                    </font>
-                </div>
-            </div>
-            <!--            <div id="clock-box">-->
-            <!--                <span class="STYLE1"></span><font color="#33CC00">你存在我记忆里，</font>-->
-            <!--                <span class="STYLE1"></span><font color="#33CC00">已经是……</font>-->
-            <!--                <span class="STYLE1"></span>-->
-            <!--                <font color="#33CC00"></font>-->
-            <!--                <span class="STYLE1"></span>-->
-            <!--                <div id="clock"></div>-->
-            <!--            </div>-->
-            <canvas id="canvas" width="1100" height="680"></canvas>
-        </div>
-        
+<canvas id="canvas" style="position:absolute;width:100%;height:100%;z-index:8888"></canvas>
+<canvas style="position:absolute;width:100%;height:100%;z-index:9999" class="canvas" ></canvas>
+<div class="overlay">
+  <div class="tabs">
+    <div class="tabs-labels"><span class="tabs-label">Commands</span><span class="tabs-label">Info</span><span class="tabs-label">Share</span></div>
+
+    <div class="tabs-panels">
+      <ul class="tabs-panel commands">
+      </ul>
     </div>
-    
-    <script>
-        </script>
-    
-    <script>
-        (function(){
-            var canvas = $('#canvas');
-            
-            if (!canvas[0].getContext) {
-                $("#error").show();
-                return false;        }
-            
-            var width = canvas.width();
-            var height = canvas.height();
-            canvas.attr("width", width);
-            canvas.attr("height", height);
-            var opts = {
-                seed: {
-                    x: width / 2 - 20,
-                    color: "rgb(190, 26, 37)",
-                    scale: 2
-                },
-                branch: [
-                         [535, 680, 570, 250, 500, 200, 30, 100, [
-                                                                  [540, 500, 455, 417, 340, 400, 13, 100, [
-                                                                                                           [450, 435, 434, 430, 394, 395, 2, 40]
-                                                                                                           ]],
-                                                                  [550, 445, 600, 356, 680, 345, 12, 100, [
-                                                                                                           [578, 400, 648, 409, 661, 426, 3, 80]
-                                                                                                           ]],
-                                                                  [539, 281, 537, 248, 534, 217, 3, 40],
-                                                                  [546, 397, 413, 247, 328, 244, 9, 80, [
-                                                                                                         [427, 286, 383, 253, 371, 205, 2, 40],
-                                                                                                         [498, 345, 435, 315, 395, 330, 4, 60]
-                                                                                                         ]],
-                                                                  [546, 357, 608, 252, 678, 221, 6, 100, [
-                                                                                                          [590, 293, 646, 277, 648, 271, 2, 80]
-                                                                                                          ]]
-                                                                  ]]
-                         ],
-                         bloom: {
-                             num: 700,
-                             width: 1080,
-                             height: 650,
-                         },
-                         footer: {
-                             width: 1200,
-                             height: 5,
-                             speed: 10,
-                         }
-            }
-            
-            var tree = new Tree(canvas[0], width, height, opts);
-            var seed = tree.seed;
-            var foot = tree.footer;
-            var hold = 1;
-            
-            canvas.click(function(e) {
-                var offset = canvas.offset(), x, y;
-                x = e.pageX - offset.left;
-                y = e.pageY - offset.top;
-                if (seed.hover(x, y)) {
-                    hold = 0;
-                    canvas.unbind("click");
-                    canvas.unbind("mousemove");
-                    canvas.removeClass('hand');
-                }
-            }).mousemove(function(e){
-                var offset = canvas.offset(), x, y;
-                x = e.pageX - offset.left;
-                y = e.pageY - offset.top;
-                canvas.toggleClass('hand', seed.hover(x, y));
-            });
-            
-            var seedAnimate = eval(Jscex.compile("async", function () {
-                seed.draw();
-                while (hold) {
-                    $await(Jscex.Async.sleep(10));
-                }
-                while (seed.canScale()) {
-                    seed.scale(0.95);
-                    $await(Jscex.Async.sleep(10));
-                }
-                while (seed.canMove()) {
-                    seed.move(0, 2);
-                    foot.draw();
-                    $await(Jscex.Async.sleep(10));
-                }
-            }));
-            
-            var growAnimate = eval(Jscex.compile("async", function () {
-                do {
-                    tree.grow();
-                    $await(Jscex.Async.sleep(10));
-                } while (tree.canGrow());
-            }));
-            
-            var flowAnimate = eval(Jscex.compile("async", function () {
-                do {
-                    tree.flower(2);
-                    $await(Jscex.Async.sleep(10));
-                } while (tree.canFlower());
-            }));
-            
-            var moveAnimate = eval(Jscex.compile("async", function () {
-                tree.snapshot("p1", 240, 0, 610, 680);
-                while (tree.move("p1", 500, 0)) {
-                    foot.draw();
-                    $await(Jscex.Async.sleep(10));
-                }
-                foot.draw();
-                tree.snapshot("p2", 500, 0, 610, 680);
-                
-                // 会有闪烁不得意这样做, (＞﹏＜)
-                canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
-                canvas.css("background", "#ffe");
-                $await(Jscex.Async.sleep(300));
-                canvas.css("background", "none");
-            }));
-            
-            var jumpAnimate = eval(Jscex.compile("async", function () {
-                var ctx = tree.ctx;
-                while (true) {
-                    tree.ctx.clearRect(0, 0, width, height);
-                    tree.jump();
-                    foot.draw();
-                    $await(Jscex.Async.sleep(25));
-                }
-            }));
-            
-            var textAnimate = eval(Jscex.compile("async", function () {
-                var together = new Date();
-                together.setFullYear(2009, 10, 23); // 时间年月日
-                together.setHours(16); // 小时
-                together.setMinutes(53); // 分钟
-                together.setSeconds(0); // 秒前一位
-                together.setMilliseconds(2); // 秒第二位
-                
-                $("#code").fadeIn(1000);
-                $("#clock-box").fadeIn(1000);
-                while (true) {
-                    timeElapse(together);
-                    $await(Jscex.Async.sleep(1000));
-                }
-            }));
-            
-            var runAsync = eval(Jscex.compile("async", function () {
-                $await(seedAnimate());
-                $await(growAnimate());
-                $await(flowAnimate());
-                $await(moveAnimate());
-                
-                textAnimate().start();
-                AudioPlayBystr('企业文化经书。一· 使命: 让学习更轻松，让高分更简单。二· 愿景: 成为享誉全球的网络学习平台和在线教育品牌。三· 价值观: 专心专注专业做专家，利国利民利他再利己。公司底线。1. 不孝顺父母。2. 泄露公司机密。3. 弄虚作假，欺上瞒下。4. 贪污受贿，中饱私囊。5. 损害公司利益。6. 制造或传播负面信息。7. 煽动怠工或罢工。8. 不正当恋爱关系。9. 辱骂同事，打架斗殴。企业文化经书。四· 经营理念: 诚为本，和则兴; 技至精，业竞成。五· 人才理念: 孝为先，德为重，讷于言，敏于行，敢承诺，能担当。六· 管理理念: 以结果为导向，用数据说话。七· 服务理念: 以客户需求为中心，不断超出客户期望。八· 品质理念: 坚持原创，质造精典。九· 教育理念: 教为辅，育为主，教方法，效为先，树品格，育德行。十· 公司文化: 思想统一，目标统一，行动统一。十一· 军队文化: 服从指挥，严守纪律，完成任务，不找借口。十二· 家庭文化: 亲力亲为为亲人，好人好事好氛围，爱人爱己爱大家。十三· 学校文化: 勤奋好学，学以致用，用到极致。管理金句22句。1. 严是爱，松是害，不管不问要变坏。2. 敢说真话，需要魄力; 敢听真话，需要勇气。3. 管理是一种铁腕柔情、恩威并重、张弛有度的艺术。4. 命运取决于你的决定。5. 打造团队从敬畏制度开始，对违规者的宽恕就是对遵守者的最大不公平。6. 领导只有对自己狠，才能引发一群对自己狠的人。7. 一群人影响一群人，一群人驱动一群人。8. 不要让非专业的人干专业的事。9. 要让下属高效，自己不能低效。10. 工作上的严格要求，底线上的坚决捍卫，生活上的倍加关心，能力上的持续提升。11. 统一思想是避免执行障碍最重要的关键，形成承诺是杜绝借口最重要的武器。12. 尊重英雄，才能引发更多的英雄。13. 管理的终极目标就是不管理，将问题扼杀在摇篮里。14. 光讲物质，不讲精神，会让员工唯利是图; 光讲精神，不讲物质，会让员工缺乏狼性。15. 有功自下往上开始奖励，有过自上往下开始惩罚。16. 文化是企业的灵魂，是企业基业长青的保障，在被管理中感悟管理，在团队建设中领悟团队。17. 没有强大的团队，再伟大的梦想都是恶梦一场。18. 能用众力，则无敌于天下; 能用众智，则无畏于圣人。19. 管理不是看你能管多少人，而是看你能成就多少人。20. 培养一群善于解决问题的人，而不是自己去解决所有问题。21. 不要给搜寻者钥匙，而是告诉他们怎么找到钥匙。22. 员工看你怎么做，而不是听你怎么说。。全员金句30句。1. 知道百分之1 加 做到百分之99 加 相信百分之100 = 得到百分之200。2. 做人开怀大度，无愧于心; 做事斤斤计较，无愧于薪。3. 不怕千招会，就怕一招绝。4. 没有建议的意见就是发牢骚。5. 当你问我该怎么办的时候，请至少带两种解决方案来汇报工作。6. 业精于勤而荒于嬉，行成于思而毁于随。7. 用一辈子的时间，做两辈子的事，活三辈子的精彩。8. 承诺不重要，重要的是守承诺。9. 自由是建立在规则和秩序之上，否则叫散漫。10. 经常出现，时常表现，做出贡献，终被发现。11. 做人做到人人离不开，做事做到人人忘不了。12. 这个世界没有应该和理所当然，只有感恩和行动。13. 要想结果变好，首先自己变好。14. 成长就会出丑，出丑才会成长。15. 没有计划不上班，没有总结不下班。16. 敬业大于专业，专业前提敬业。17. 一丝之差，优劣分家。18. 时时寻求效率进步，事事讲究方法技术。19. 宁可事前检查，不可事后返工。20. 每天进一步，踏上成功路。21. 成功者找方法，失败者找借口。22. 行动是成功的开始，等待是失败的源头。23. 做好了，才算做了。24. 你恐惧的只是恐惧本身，而真正恐惧的事情，却永远不会到来。25. 不要把战友变成敌人。26. 优秀不是行为，而是应该成为习惯和素养，如是，成功才能复制。27. 因势而变，顺势而为，乘势而上。28. 一个人真正伟大之处就是认识到自己的渺小。29. 一个人的价值，应当看他贡献什么，而不应当看他取得什么。30. 人只要有信念，什么艰苦都能忍受，什么环境都能适应。');
-                
-                $await(jumpAnimate());
-            }));
-            
-            var AudioPlayBystr = function(str_tip){
-                var msg = new SpeechSynthesisUtterance();
-                msg.rate = 0.8; // 播放语速
-                msg.pitch = 1; // 音调高低
-                msg.text = str_tip;
-                msg.volume = 10 ; // 播放音量
-                msg.lang="zh-CN"; // 语言类型
-                speechSynthesis.speak(msg); // 播放
-                console.log(msg)
-                msg.onstart = function(){console.log("开始播放会调用我")};
-                msg.οnend = function(){console.log("播放完成才会调用我")};
-                msg.οnpause = function(){console.log("放暂停才会调用我")};
-                msg.onresume = function(){console.log("播放重新开始才会调用我")};
-                msg.οnerrοr = function(error){console.log("播放出现错误才会调用我"+error)};
-            }
-            
-            runAsync().start();
-        })();
-    </script>
-    
-</body></html>
+  </div>
+</div>
+<script>
+function initVars(){
+
+	pi=Math.PI;
+	ctx=canvas.getContext("2d");
+	canvas.width=canvas.clientWidth;
+	canvas.height=canvas.clientHeight;
+	cx=canvas.width/2;
+	cy=canvas.height/2;
+	playerZ=-25;
+	playerX=playerY=playerVX=playerVY=playerVZ=pitch=yaw=pitchV=yawV=0;
+	scale=600;
+	seedTimer=0;seedInterval=5,seedLife=100;gravity=.02;
+	seeds=new Array();
+	sparkPics=new Array();
+	s="https://cantelope.org/NYE/";
+	for(i=1;i<=10;++i){
+		sparkPic=new Image();
+		sparkPic.src=s+"spark"+i+".png";
+		sparkPics.push(sparkPic);
+	}
+	sparks=new Array();
+	pow1=new Audio(s+"pow1.ogg");
+	pow2=new Audio(s+"pow2.ogg");
+	pow3=new Audio(s+"pow3.ogg");
+	pow4=new Audio(s+"pow4.ogg");
+	frames = 0;
+}
+
+function rasterizePoint(x,y,z){
+
+	var p,d;
+	x-=playerX;
+	y-=playerY;
+	z-=playerZ;
+	p=Math.atan2(x,z);
+	d=Math.sqrt(x*x+z*z);
+	x=Math.sin(p-yaw)*d;
+	z=Math.cos(p-yaw)*d;
+	p=Math.atan2(y,z);
+	d=Math.sqrt(y*y+z*z);
+	y=Math.sin(p-pitch)*d;
+	z=Math.cos(p-pitch)*d;
+	var rx1=-1000,ry1=1,rx2=1000,ry2=1,rx3=0,ry3=0,rx4=x,ry4=z,uc=(ry4-ry3)*(rx2-rx1)-(rx4-rx3)*(ry2-ry1);
+	if(!uc) return {x:0,y:0,d:-1};
+	var ua=((rx4-rx3)*(ry1-ry3)-(ry4-ry3)*(rx1-rx3))/uc;
+	var ub=((rx2-rx1)*(ry1-ry3)-(ry2-ry1)*(rx1-rx3))/uc;
+	if(!z)z=.000000001;
+	if(ua>0&&ua<1&&ub>0&&ub<1){
+		return {
+			x:cx+(rx1+ua*(rx2-rx1))*scale,
+			y:cy+y/z*scale,
+			d:Math.sqrt(x*x+y*y+z*z)
+		};
+	}else{
+		return {
+			x:cx+(rx1+ua*(rx2-rx1))*scale,
+			y:cy+y/z*scale,
+			d:-1
+		};
+	}
+}
+
+function spawnSeed(){
+
+	seed=new Object();
+	seed.x=-50+Math.random()*100;
+	seed.y=25;
+	seed.z=-50+Math.random()*100;
+	seed.vx=.1-Math.random()*.2;
+	seed.vy=-1.5;//*(1+Math.random()/2);
+	seed.vz=.1-Math.random()*.2;
+	seed.born=frames;
+	seeds.push(seed);
+}
+
+function splode(x,y,z){
+
+	t=5+parseInt(Math.random()*150);
+	sparkV=1+Math.random()*2.5;
+	type=parseInt(Math.random()*3);
+	switch(type){
+		case 0:
+			pic1=parseInt(Math.random()*10);
+			break;
+		case 1:
+			pic1=parseInt(Math.random()*10);
+			do{ pic2=parseInt(Math.random()*10); }while(pic2==pic1);
+			break;
+		case 2:
+			pic1=parseInt(Math.random()*10);
+			do{ pic2=parseInt(Math.random()*10); }while(pic2==pic1);
+			do{ pic3=parseInt(Math.random()*10); }while(pic3==pic1 || pic3==pic2);
+			break;
+	}
+	for(m=1;m<t;++m){
+		spark=new Object();
+		spark.x=x; spark.y=y; spark.z=z;
+		p1=pi*2*Math.random();
+		p2=pi*Math.random();
+		v=sparkV*(1+Math.random()/6)
+		spark.vx=Math.sin(p1)*Math.sin(p2)*v;
+		spark.vz=Math.cos(p1)*Math.sin(p2)*v;
+		spark.vy=Math.cos(p2)*v;
+		switch(type){
+			case 0: spark.img=sparkPics[pic1]; break;
+			case 1:
+				spark.img=sparkPics[parseInt(Math.random()*2)?pic1:pic2];
+				break;
+			case 2:
+				switch(parseInt(Math.random()*3)){
+					case 0: spark.img=sparkPics[pic1]; break;
+					case 1: spark.img=sparkPics[pic2]; break;
+					case 2: spark.img=sparkPics[pic3]; break;
+				}
+				break;
+		}
+		spark.radius=25+Math.random()*50;
+		spark.alpha=1;
+		spark.trail=new Array();
+		sparks.push(spark);
+	}
+	switch(parseInt(Math.random()*4)){
+		case 0:	pow=new Audio(s+"pow1.ogg"); break;
+		case 1:	pow=new Audio(s+"pow2.ogg"); break;
+		case 2:	pow=new Audio(s+"pow3.ogg"); break;
+		case 3:	pow=new Audio(s+"pow4.ogg"); break;
+	}
+	d=Math.sqrt((x-playerX)*(x-playerX)+(y-playerY)*(y-playerY)+(z-playerZ)*(z-playerZ));
+	pow.volume=1.5/(1+d/10);
+	pow.play();
+}
+
+function doLogic(){
+
+	if(seedTimer<frames){
+		seedTimer=frames+seedInterval*Math.random()*10;
+		spawnSeed();
+	}
+	for(i=0;i<seeds.length;++i){
+		seeds[i].vy+=gravity;
+		seeds[i].x+=seeds[i].vx;
+		seeds[i].y+=seeds[i].vy;
+		seeds[i].z+=seeds[i].vz;
+		if(frames-seeds[i].born>seedLife){
+			splode(seeds[i].x,seeds[i].y,seeds[i].z);
+			seeds.splice(i,1);
+		}
+	}
+	for(i=0;i<sparks.length;++i){
+		if(sparks[i].alpha>0 && sparks[i].radius>5){
+			sparks[i].alpha-=.01;
+			sparks[i].radius/=1.02;
+			sparks[i].vy+=gravity;
+			point=new Object();
+			point.x=sparks[i].x;
+			point.y=sparks[i].y;
+			point.z=sparks[i].z;
+			if(sparks[i].trail.length){
+				x=sparks[i].trail[sparks[i].trail.length-1].x;
+				y=sparks[i].trail[sparks[i].trail.length-1].y;
+				z=sparks[i].trail[sparks[i].trail.length-1].z;
+				d=((point.x-x)*(point.x-x)+(point.y-y)*(point.y-y)+(point.z-z)*(point.z-z));
+				if(d>9){
+					sparks[i].trail.push(point);
+				}
+			}else{
+				sparks[i].trail.push(point);
+			}
+			if(sparks[i].trail.length>5)sparks[i].trail.splice(0,1);
+			sparks[i].x+=sparks[i].vx;
+			sparks[i].y+=sparks[i].vy;
+			sparks[i].z+=sparks[i].vz;
+			sparks[i].vx/=1.075;
+			sparks[i].vy/=1.075;
+			sparks[i].vz/=1.075;
+		}else{
+			sparks.splice(i,1);
+		}
+	}
+	p=Math.atan2(playerX,playerZ);
+	d=Math.sqrt(playerX*playerX+playerZ*playerZ);
+	d+=Math.sin(frames/80)/1.25;
+	t=Math.sin(frames/200)/40;
+	playerX=Math.sin(p+t)*d;
+	playerZ=Math.cos(p+t)*d;
+	yaw=pi+p+t;
+}
+
+function rgb(col){
+
+	var r = parseInt((.5+Math.sin(col)*.5)*16);
+	var g = parseInt((.5+Math.cos(col)*.5)*16);
+	var b = parseInt((.5-Math.sin(col)*.5)*16);
+	return "#"+r.toString(16)+g.toString(16)+b.toString(16);
+}
+
+function draw(){
+
+	ctx.clearRect(0,0,cx*2,cy*2);
+
+	ctx.fillStyle="#ff8";
+	for(i=-100;i<100;i+=3){
+		for(j=-100;j<100;j+=4){
+			x=i;z=j;y=25;
+			point=rasterizePoint(x,y,z);
+			if(point.d!=-1){
+				size=250/(1+point.d);
+				d = Math.sqrt(x * x + z * z);
+				a = 0.75 - Math.pow(d / 100, 6) * 0.75;
+				if(a>0){
+					ctx.globalAlpha = a;
+					ctx.fillRect(point.x-size/2,point.y-size/2,size,size);
+				}
+			}
+		}
+	}
+	ctx.globalAlpha=1;
+	for(i=0;i<seeds.length;++i){
+		point=rasterizePoint(seeds[i].x,seeds[i].y,seeds[i].z);
+		if(point.d!=-1){
+			size=200/(1+point.d);
+			ctx.fillRect(point.x-size/2,point.y-size/2,size,size);
+		}
+	}
+	point1=new Object();
+	for(i=0;i<sparks.length;++i){
+		point=rasterizePoint(sparks[i].x,sparks[i].y,sparks[i].z);
+		if(point.d!=-1){
+			size=sparks[i].radius*200/(1+point.d);
+			if(sparks[i].alpha<0)sparks[i].alpha=0;
+			if(sparks[i].trail.length){
+				point1.x=point.x;
+				point1.y=point.y;
+				switch(sparks[i].img){
+					case sparkPics[0]:ctx.strokeStyle="#f84";break;
+					case sparkPics[1]:ctx.strokeStyle="#84f";break;
+					case sparkPics[2]:ctx.strokeStyle="#8ff";break;
+					case sparkPics[3]:ctx.strokeStyle="#fff";break;
+					case sparkPics[4]:ctx.strokeStyle="#4f8";break;
+					case sparkPics[5]:ctx.strokeStyle="#f44";break;
+					case sparkPics[6]:ctx.strokeStyle="#f84";break;
+					case sparkPics[7]:ctx.strokeStyle="#84f";break;
+					case sparkPics[8]:ctx.strokeStyle="#fff";break;
+					case sparkPics[9]:ctx.strokeStyle="#44f";break;
+				}
+				for(j=sparks[i].trail.length-1;j>=0;--j){
+					point2=rasterizePoint(sparks[i].trail[j].x,sparks[i].trail[j].y,sparks[i].trail[j].z);
+					if(point2.d!=-1){
+						ctx.globalAlpha=j/sparks[i].trail.length*sparks[i].alpha/2;
+						ctx.beginPath();
+						ctx.moveTo(point1.x,point1.y);
+						ctx.lineWidth=1+sparks[i].radius*10/(sparks[i].trail.length-j)/(1+point2.d);
+						ctx.lineTo(point2.x,point2.y);
+						ctx.stroke();
+						point1.x=point2.x;
+						point1.y=point2.y;
+					}
+				}
+			}
+			ctx.globalAlpha=sparks[i].alpha;
+			ctx.drawImage(sparks[i].img,point.x-size/2,point.y-size/2,size,size);
+		}
+	}
+}
+
+function frame(){
+
+	if(frames>100000){
+		seedTimer=0;
+		frames=0;
+	}
+	frames++;
+	draw();
+	doLogic();
+	requestAnimationFrame(frame);
+}
+
+window.addEventListener("resize",()=>{
+	canvas.width=canvas.clientWidth;
+	canvas.height=canvas.clientHeight;
+	cx=canvas.width/2;
+	cy=canvas.height/2;
+});
+
+initVars();
+frame();
+</script>
+<script src="js/index.js"></script>
+
+</body>
+</html>
